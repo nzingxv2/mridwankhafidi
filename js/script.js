@@ -36,9 +36,10 @@ function revealOnScroll() {
     elements.forEach(function(element) {
         var elementTop = element.getBoundingClientRect().top;
         var elementVisible = 150;
-        var delay = element.dataset.delay || 0;
         
         if (elementTop < window.innerHeight - elementVisible) {
+            var delay = element.dataset.delay || 0;
+            
             setTimeout(function() {
                 element.classList.add('active');
             }, delay * 300);
@@ -46,8 +47,8 @@ function revealOnScroll() {
     });
 }
 
-// Initialize scroll animations
 window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('resize', revealOnScroll); // Tambahkan resize handler
 revealOnScroll(); // Initialize on load
 
 // Form validation and email sending
@@ -158,3 +159,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
     }, 100);
 });
+
+const hamburger = document.querySelector('.hamburger');
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    });
+}
+
