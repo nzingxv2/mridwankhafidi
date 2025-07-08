@@ -1,16 +1,20 @@
+\/* jshint esversion: 6 */
+/* jshint browser: true */
+/* jshint devel: true */
+
 // Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
-        const targetId = this.getAttribute('href');
+        var targetId = this.getAttribute('href');
         if (targetId === '#') return;
         
-        const targetElement = document.querySelector(targetId);
+        var targetElement = document.querySelector(targetId);
         if (targetElement) {
             // Calculate scroll position considering navbar height
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + 
+            var navbarHeight = document.querySelector('.navbar').offsetHeight;
+            var targetPosition = targetElement.getBoundingClientRect().top + 
                                 window.pageYOffset - 
                                 navbarHeight;
             
@@ -27,15 +31,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Reveal animations on scroll
 function revealOnScroll() {
-    const elements = document.querySelectorAll('.reveal');
+    var elements = document.querySelectorAll('.reveal');
     
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        const delay = element.dataset.delay || 0;
+    elements.forEach(function(element) {
+        var elementTop = element.getBoundingClientRect().top;
+        var elementVisible = 150;
+        var delay = element.dataset.delay || 0;
         
         if (elementTop < window.innerHeight - elementVisible) {
-            setTimeout(() => {
+            setTimeout(function() {
                 element.classList.add('active');
             }, delay * 300);
         }
@@ -46,19 +50,19 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Initialize on load
 
-// Form validation
-const contactForm = document.getElementById('contact-form');
+// Form validation and email sending
+var contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        let isValid = true;
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
+        var isValid = true;
+        var nameInput = document.getElementById('name');
+        var emailInput = document.getElementById('email');
+        var messageInput = document.getElementById('message');
         
         // Reset errors
-        document.querySelectorAll('.error-message').forEach(el => {
+        document.querySelectorAll('.error-message').forEach(function(el) {
             el.textContent = '';
         });
         
@@ -69,7 +73,7 @@ if (contactForm) {
         }
         
         // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailInput.value.trim()) {
             isValid = false;
             emailInput.nextElementSibling.textContent = 'Email is required';
@@ -84,37 +88,48 @@ if (contactForm) {
             messageInput.nextElementSibling.textContent = 'Message is required';
         }
         
-        // If valid, show success and reset form
+        // If valid, send email using EmailJS
         if (isValid) {
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnContent = submitBtn.innerHTML;
+            var submitBtn = contactForm.querySelector('button[type="submit"]');
+            var originalBtnContent = submitBtn.innerHTML;
             
             // Show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Simulate API call
-            setTimeout(() => {
-                // Show success message
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                
-                // Reset after delay
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalBtnContent;
-                    submitBtn.disabled = false;
-                    contactForm.reset();
-                }, 2000);
-            }, 1500);
+            // Send email using EmailJS
+            emailjs.sendForm('pytctm6', 'template_z25i39a', this)
+                .then(function() {
+                    // Show success message
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                    
+                    // Reset after delay
+                    setTimeout(function() {
+                        submitBtn.innerHTML = originalBtnContent;
+                        submitBtn.disabled = false;
+                        contactForm.reset();
+                    }, 2000);
+                }, function(error) {
+                    // Show error message
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed';
+                    console.error('Failed to send message:', error);
+                    
+                    // Reset button after delay
+                    setTimeout(function() {
+                        submitBtn.innerHTML = originalBtnContent;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                });
         }
     });
 }
 
 // Theme toggle functionality
-const themeToggle = document.querySelector('.theme-toggle');
+var themeToggle = document.querySelector('.theme-toggle');
 if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+    themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('light-theme');
-        const icon = themeToggle.querySelector('i');
+        var icon = themeToggle.querySelector('i');
         
         if (document.body.classList.contains('light-theme')) {
             icon.classList.replace('fa-moon', 'fa-sun');
@@ -125,21 +140,21 @@ if (themeToggle) {
 }
 
 // Project card hover animation enhancement
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+document.querySelectorAll('.project-card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
         
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
     });
 });
 
 // Initialize animations when page loads
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     // Add transition after page loads to prevent initial flash
-    setTimeout(() => {
+    setTimeout(function() {
         document.body.classList.add('loaded');
     }, 100);
 });
