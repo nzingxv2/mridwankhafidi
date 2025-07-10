@@ -1,229 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Muhammad Riduwan Khafidi | nzingxv2</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-            (function() {
-                emailjs.init("TAHTq0jJeaimxS9TT");
-            })();
-        </script>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="container">
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <a href="#hero" class="brand">nzingxv2</a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="theme-toggle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Riduwan Khafidi | nzingxv2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="brand">nzingxv2</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle">
                 <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </nav>
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="reveal">Muhammad Riduwan Khafidi</h1>
-                    <p class="subtitle reveal" data-delay="0.2s">Electrical Engineering Student & Open-Source Developer</p>
-                    <p class="hero-description reveal" data-delay="0.4s">A passionate SMK Electrical Engineering student who loves coding and open-source hardware.</p>
-                    <div class="cta-buttons reveal" data-delay="0.6s">
-                        <a href="#projects" class="btn primary">View Projects</a>
-                        <a href="#contact" class="btn secondary">Get in Touch</a>
-                    </div>
+            </button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal">Muhammad Riduwan Khafidi</h1>
+                <p class="subtitle reveal" data-delay="0.2s">Electrical Engineering Student & Open-Source Developer</p>
+                <p class="hero-description reveal" data-delay="0.4s">A passionate SMK Electrical Engineering student who loves coding and open-source hardware.</p>
+                <div class="cta-buttons reveal" data-delay="0.6s">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
                 </div>
             </div>
-            <div class="hero-scroll-indicator">
-                <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="accent-line"></div>
             </div>
-        </section>
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Me</h2>
-                    <div class="accent-line"></div>
+            <div class="about-content">
+                <div class="bio reveal">
+                    <p>I'm a second-year Electrical Engineering student with a passion for coding and creating open-source tools that solve real problems. My journey combines technical education with practical software development.</p>
+                    <p>When I'm not working on school projects, you'll find me developing open-source tools for developers, experimenting with hardware programming, or contributing to tech communities.</p>
                 </div>
-                <div class="about-content">
-                    <div class="bio reveal">
-                        <p>I'm a second-year Electrical Engineering student with a passion for coding and creating open-source tools that solve real problems. My journey combines technical education with practical software development.</p>
-                        <p>When I'm not working on school projects, you'll find me developing open-source tools for developers, experimenting with hardware programming, or contributing to tech communities.</p>
-                    </div>
-                    <div class="skills reveal" data-delay="0.2s">
-                        <h3>Core Skills & Interests</h3>
-                        <ul>
-                            <li>Electrical Engineering</li>
-                            <li>JavaScript Development</li>
-                            <li>Open-Source Hardware</li>
-                            <li>CLI Tool Development</li>
-                            <li>Documentation Systems</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Projects</h2>
-                    <div class="accent-line"></div>
-                </div>
-                <div class="projects-grid">
-                    <!-- Project yang sudah ada -->
-                    <div class="project-card reveal">
-                        <div class="project-icon">
-                            <i class="fas fa-puzzle-piece"></i>
-                        </div>
-                        <h3>modsy</h3>
-                        <p>Easily stitch your node_modules anywhere</p>
-                        <a href="https://github.com/nzingxv2/modsy" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <div class="project-card reveal" data-delay="0.1s">
-                        <div class="project-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>docver</h3>
-                        <p>Static site generator for Markdown, inspired by Vercel & Docsify</p>
-                        <a href="https://github.com/nzingxv2/docver" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <div class="project-card reveal" data-delay="0.2s">
-                        <div class="project-icon">
-                            <i class="fas fa-toolbox"></i>
-                        </div>
-                        <h3>repo-kit</h3>
-                        <p>A simple starter kit repository and another project</p>
-                        <a href="https://github.com/nzingxv2/repo-kit" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <!-- Project baru -->
-                    <div class="project-card reveal" data-delay="0.3s">
-                        <div class="project-icon">
-                            <i class="fas fa-clipboard-list"></i>
-                        </div>
-                        <h3>changelo</h3>
-                        <p>A CLI to generate changelog from git diff</p>
-                        <a href="https://github.com/nzingxv2/changelo" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <div class="project-card reveal" data-delay="0.4s">
-                        <div class="project-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>syn</h3>
-                        <p>Universal portable script repository and installer for Linux & macOS</p>
-                        <a href="https://github.com/nzingxv2/syn" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <div class="project-card reveal" data-delay="0.5s">
-                        <div class="project-icon">
-                            <i class="fas fa-file-excel"></i>
-                        </div>
-                        <h3>diffxl-go</h3>
-                        <p>CLI tool to recursively compare Excel files & folders</p>
-                        <a href="https://github.com/nzingxv2/diffxl-go" target="_blank" class="project-link">
-                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
+                <div class="skills reveal" data-delay="0.2s">
+                    <h3>Core Skills & Interests</h3>
+                    <ul>
+                        <li>Electrical Engineering</li>
+                        <li>JavaScript Development</li>
+                        <li>Open-Source Hardware</li>
+                        <li>CLI Tool Development</li>
+                        <li>Documentation Systems</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <div class="accent-line"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>modsy</h3>
+                    <p>Easily stitch your node_modules anywhere</p>
+                    <a href="https://github.com/nzingxv2/modsy" target="_blank" class="project-link">
+                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
-                <div class="contact-wrapper">
-                    <div class="contact-info reveal">
-                        <h3>Contact Information</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:riduwankhafidi@proton.me">riduwankhafidi@proton.me</a>
-                            </li>
-                            <li>
-                                <i class="fab fa-instagram"></i>
-                                <a href="https://instagram.com/ridwan.arch__" target="_blank">@ridwan.arch__</a>
-                            </li>
-                            <li>
-                                <i class="fab fa-github"></i>
-                                <a href="https://github.com/nzingxv2" target="_blank">nzingxv2</a>
-                            </li>
-                        </ul>
-                        <div class="social-icons">
-                            <a href="https://github.com/nzingxv2" target="_blank" class="social-icon">
-                            <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://instagram.com/ridwan.arch__" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="mailto:ridwankhafidi@proton.me" class="social-icon">
+                
+                <div class="project-card reveal" data-delay="0.1s">
+                    <div class="project-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>docver</h3>
+                    <p>Static site generator for Markdown, inspired by Vercel & Docsify</p>
+                    <a href="https://github.com/nzingxv2/docver" target="_blank" class="project-link">
+                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card reveal" data-delay="0.2s">
+                    <div class="project-icon">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <h3>repo-kit</h3>
+                    <p>A simple starter kit repository and another project</p>
+                    <a href="https://github.com/nzingxv2/repo-kit" target="_blank" class="project-link">
+                        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>
                             <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+                            <a href="mailto:ridwankhafidi@proton.me">ridwankhafidi@proton.me</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://instagram.com/ridwan.arch__" target="_blank">@ridwan.arch__</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/nzingxv2" target="_blank">nzingxv2</a>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://github.com/nzingxv2" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com/ridwan.arch__" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:ridwankhafidi@proton.me" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
-                    <form id="contact-form" class="contact-form reveal" data-delay="0.2s">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                            <div class="error-message"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                            <div class="error-message"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <div class="error-message"></div>
-                        </div>
-                        <button type="submit" class="btn primary">
+                </div>
+                
+                <form id="contact-form" class="contact-form reveal" data-delay="0.2s">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="error-message"></div>
+                    </div>
+                    <button type="submit" class="btn primary">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">nzingxv2</span>
+                    <p>Building tools for the open-source community</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
-        </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-brand">
-                        <span class="logo">nzingxv2</span>
-                        <p>Building tools for the open-source community</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#hero">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Muhammad Riduwan Khafidi. All rights reserved.</p>
-                    <p>Designed and built with <i class="fas fa-heart"></i> and ThinkPad spirit</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Muhammad Riduwan Khafidi. All rights reserved.</p>
+                <p>Designed and built with <i class="fas fa-heart"></i> and ThinkPad spirit</p>
             </div>
-        </footer>
-        <script src="js/script.js"></script>
-    </body>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
