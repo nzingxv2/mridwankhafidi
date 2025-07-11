@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Riduwan Khafidi | nzingxv2</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Muhammad Riduwan Khafidi | Electrical Engineer & Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" type="text/css" media="all" />
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#hero" class="brand">nzingxv2</a>
+            <a href="#hero" class="brand">
+                <i class="fas fa-terminal"></i>
+                nzingxv2
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about" class="active">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="theme-toggle">
                 <i class="fas fa-moon"></i>
             </button>
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1 class="reveal">Muhammad Riduwan Khafidi</h1>
-                <p class="subtitle reveal" data-delay="0.2s">Electrical Engineering Student & Open-Source Developer</p>
-                <p class="hero-description reveal" data-delay="0.4s">A passionate SMK Electrical Engineering student who loves coding and open-source hardware.</p>
-                <div class="cta-buttons reveal" data-delay="0.6s">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                <p class="subtitle reveal">Electrical Engineering Student & Open-Source Developer</p>
+                <p class="hero-description reveal">
+                    A passionate SMK Electrical Engineering student who loves coding and creating open-source tools. 
+                    Combining technical expertise with software development to build innovative solutions.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary reveal">View Projects</a>
+                    <a href="#contact" class="btn secondary reveal">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -42,6 +51,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -50,23 +60,63 @@
             </div>
             <div class="about-content">
                 <div class="bio reveal">
-                    <p>I'm a second-year Electrical Engineering student with a passion for coding and creating open-source tools that solve real problems. My journey combines technical education with practical software development.</p>
-                    <p>When I'm not working on school projects, you'll find me developing open-source tools for developers, experimenting with hardware programming, or contributing to tech communities.</p>
+                    <p>
+                        I'm a second-year Electrical Engineering student with a passion for coding and creating 
+                        open-source tools that solve real problems. My journey combines technical education with 
+                        practical software development.
+                    </p>
+                    <p>
+                        When I'm not working on school projects, you'll find me developing open-source tools 
+                        for developers, experimenting with hardware programming, or contributing to tech communities.
+                        I believe in building tools that make developers' lives easier and more productive.
+                    </p>
+                    <p>
+                        My approach combines meticulous attention to detail with a passion for elegant solutions. 
+                        I thrive on challenges that require both technical expertise and creative problem-solving.
+                    </p>
                 </div>
-                <div class="skills reveal" data-delay="0.2s">
+                <div class="skills reveal">
                     <h3>Core Skills & Interests</h3>
-                    <ul>
-                        <li>Electrical Engineering</li>
-                        <li>JavaScript Development</li>
-                        <li>Open-Source Hardware</li>
-                        <li>CLI Tool Development</li>
-                        <li>Documentation Systems</li>
-                    </ul>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Electrical Engineering</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>Open-Source Hardware</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>CLI Tool Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-book"></i>
+                            <span>Documentation Systems</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <span>Modular Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>API Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wrench"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -79,29 +129,29 @@
                         <i class="fas fa-puzzle-piece"></i>
                     </div>
                     <h3>modsy</h3>
-                    <p>Easily stitch your node_modules anywhere</p>
+                    <p>A powerful tool that allows developers to easily stitch their node_modules anywhere. Simplifies dependency management and improves development workflow efficiency.</p>
                     <a href="https://github.com/nzingxv2/modsy" target="_blank" class="project-link">
                         View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
                 
-                <div class="project-card reveal" data-delay="0.1s">
+                <div class="project-card reveal">
                     <div class="project-icon">
                         <i class="fas fa-book"></i>
                     </div>
                     <h3>docver</h3>
-                    <p>Static site generator for Markdown, inspired by Vercel & Docsify</p>
+                    <p>Static site generator for Markdown documentation, inspired by Vercel & Docsify. Enables beautiful, responsive documentation with minimal configuration.</p>
                     <a href="https://github.com/nzingxv2/docver" target="_blank" class="project-link">
                         View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
                 
-                <div class="project-card reveal" data-delay="0.2s">
+                <div class="project-card reveal">
                     <div class="project-icon">
                         <i class="fas fa-toolbox"></i>
                     </div>
                     <h3>repo-kit</h3>
-                    <p>A simple starter kit repository and another project</p>
+                    <p>A comprehensive starter kit repository that provides essential tools and configurations for new projects. Streamlines project setup and standardization.</p>
                     <a href="https://github.com/nzingxv2/repo-kit" target="_blank" class="project-link">
                         View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
@@ -110,6 +160,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -130,7 +181,11 @@
                         </li>
                         <li>
                             <i class="fab fa-github"></i>
-                            <a href="https://github.com/nzingxv2" target="_blank">nzingxv2</a>
+                            <a href="https://github.com/nzingxv2" target="_blank">github.com/nzingxv2</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Indonesia</span>
                         </li>
                     </ul>
                     <div class="social-icons">
@@ -143,24 +198,27 @@
                         <a href="mailto:ridwankhafidi@proton.me" class="social-icon">
                             <i class="fas fa-envelope"></i>
                         </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <form id="contact-form" class="contact-form reveal" data-delay="0.2s">
+                <form id="contact-form" class="contact-form reveal">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
-                        <div class="error-message"></div>
+                        <div class="error-message">Please enter your name</div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
-                        <div class="error-message"></div>
+                        <div class="error-message">Please enter a valid email</div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
-                        <div class="error-message"></div>
+                        <div class="error-message">Please enter your message</div>
                     </div>
                     <button type="submit" class="btn primary">
                         <span>Send Message</span>
@@ -171,6 +229,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -191,7 +250,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
